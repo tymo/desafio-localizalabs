@@ -1,5 +1,17 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #006400; /* same green as header */
+}
+
 .App {
   text-align: center;
+  min-height: 100vh;
+  border-left: 50px solid #006400;
+  border-right: 50px solid #006400;
+  box-sizing: border-box;
+  background: #fff;
+  padding-top: 64px; /* space for fixed header (default AppBar height) */
 }
 
 .App-logo {
