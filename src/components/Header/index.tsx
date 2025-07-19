@@ -8,19 +8,24 @@ const Header: React.FC = () => (
     sx={{
       backgroundColor: "#006400", // Cor de fundo do cabeçalho
       color: "#FFFFFF", // Cor do texto
-      paddingY: 2, // Espaçamento vertical interno
+      py: { xs: 1, sm: 2 }, // Responsivo
     }}
-    elevation={1}
+    elevation={2}
     role="banner"
   >
     <Toolbar>
+      {/* Exemplo de logo */}
+      {/* <img src="/logo192.png" alt="Logo" style={{ height: 32, marginRight: 16 }} /> */}
       <Typography
         variant="h6"
         component="div"
         sx={{
           flexGrow: 1, // Ocupa toda a largura disponível
           textAlign: "center", // Centraliza o texto
-          fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" }, // Tamanhos responsivos
+          fontWeight: "bold",
+          letterSpacing: 1,
+          fontSize: { xs: "1.2rem", sm: "2rem", md: "2.5rem" }, // Tamanhos responsivos
+          textTransform: "uppercase",
         }}
       >
         Desafio Localizalabs

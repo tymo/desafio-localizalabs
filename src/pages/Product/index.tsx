@@ -79,7 +79,8 @@ const ProductsPage: React.FC = () => {
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
-        pt: "64px", // Para compensar o Header fixo
+        pt: "64px",
+        px: { xs: 2, sm: 3 }, // Padding lateral responsivo
       }}
     >
       <Typography variant="h4" component="h1" gutterBottom align="center">
@@ -106,12 +107,15 @@ const ProductsPage: React.FC = () => {
       {/* Exibe lista de produtos e paginação */}
       {!loading && !error && (
         <>
-          {/* Lista de produtos rolável */}
+          {/* Lista de produtos rolável, ocupando no máximo 58% da área visível */}
           <Box
             sx={{
               flexGrow: 1,
               minHeight: 0,
+              maxHeight: "58vh", // Limita a altura máxima a 58% da viewport
               overflowY: "auto",
+              border: "1px solid #ddd",
+              borderRadius: 2,
               pr: 1,
             }}
           >
@@ -203,7 +207,18 @@ const ProductsPage: React.FC = () => {
             </Grid>
           </Box>
           {/* Paginação sempre visível na parte inferior */}
-          <Box display="flex" justifyContent="center" sx={{ flexShrink: 0 }}>
+          <Box
+            display="flex"
+            justifyContent="center"
+            sx={{
+              flexShrink: 0,
+              border: "1px solid #ddd", // Borda ao redor da paginação
+              borderRadius: 8,
+              mt: "10px", // Espaço de 10px acima da paginação
+              p: 1, // Espaçamento interno opcional
+              background: "#fafafa", // Opcional: destaca a área da paginação
+            }}
+          >
             <Pagination
               count={totalPages}
               page={currentPage}
