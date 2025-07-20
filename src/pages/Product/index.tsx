@@ -146,14 +146,8 @@ const ProductsPage: React.FC = () => {
                   }}
                 >
                   <Box
-                    sx={{
-                      display: "flex",
-                      alignItems: "flex-start",
-                      border: "1px solid #eee",
-                      borderRadius: 2,
-                      p: 2,
-                      background: "#fafafa",
-                    }}
+                    className="card-default"
+                    sx={{ p: 2, display: "flex", alignItems: "flex-start" }}
                   >
                     <CardMedia
                       component="img"
@@ -210,14 +204,8 @@ const ProductsPage: React.FC = () => {
           <Box
             display="flex"
             justifyContent="center"
-            sx={{
-              flexShrink: 0,
-              border: "1px solid #ddd", // Borda ao redor da paginação
-              borderRadius: 8,
-              mt: "10px", // Espaço de 10px acima da paginação
-              p: 1, // Espaçamento interno opcional
-              background: "#fafafa", // Opcional: destaca a área da paginação
-            }}
+            className="pagination-container"
+            sx={{ flexShrink: 0 }}
           >
             <Pagination
               count={totalPages}

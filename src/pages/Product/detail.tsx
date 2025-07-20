@@ -101,10 +101,12 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ id, onBack }) => {
         <CardContent>
           {/* Detalhes do produto */}
           <Box
+            className="card-default"
             sx={{
+              p: 2,
               display: "flex",
-              flexDirection: "column",
               alignItems: "flex-start",
+              flexDirection: "column",
               textAlign: "left",
               mb: 3,
             }}

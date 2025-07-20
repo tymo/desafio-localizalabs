@@ -48,3 +48,35 @@ body {
     transform: rotate(360deg);
   }
 }
+
+/* styles.css */
+.header-appbar {
+  background-color: #006400 !important;
+  color: #fff !important;
+}
+
+.header-title {
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.card-default {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: box-shadow 0.2s;
+}
+
+.card-default:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.pagination-container {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 8px;
+  background: #fafafa;
+}
